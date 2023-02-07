@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: hsl(27, 66%, 92%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+/* font-family: 'DM Sans', sans-serif; */
+
+main {
+    width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 540px;
+}
+
+header {
+    width: 100%;
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 20px;
+    display: flex;
+    padding: 30px;
+}
+
+header .half {
+    width: 50%;
+    margin: auto 0;
+}
+
+header span {
+    display: block;
+    color: white;
+    font-weight: 400;
+    margin: 8px 0;
+}
+
+header span#money {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+header .half:last-of-type {
+    position: relative;
+}
+
+header .circle {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header .circle:first-of-type {
+    background-color: hsl(25, 47%, 15%);
+}
+
+header .circle:last-of-type {
+    background-color: transparent;
+    border: 1px solid white;
+    right: 20px;
+}
+
+.app {
+    background-color: hsl(33, 100%, 98%);
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.app h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    color: hsl(25, 47%, 15%);
+}
+
+.app .daysOfWeek {
+    padding: 50px 0 20px;
+    border-bottom: 1px solid hsl(28, 10%, 53%);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: end;
+}
+
+.app .daysOfWeek #day {
+    width: 14.28%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+}
+
+.app .daysOfWeek #day span#value {
+    background-color: hsl(25, 47%, 15%);
+    padding: 6px;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: hsl(33, 100%, 98%);
+    border-radius: 5px;
+    display: none;
+}
+
+.app .daysOfWeek #day #chart {
+    width: 60%;
+    height: 50px;
+    background-color: rgb(236, 119, 95);
+    margin: 0 auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.app .daysOfWeek #day #chart:hover {
+    background-color: rgba(236, 119, 95, 0.4);
+}
+
+.app .daysOfWeek #day #chart.bigger {
+    background-color: rgb(118, 181, 188);
+}
+
+.app .daysOfWeek #day #chart.bigger:hover {
+    background-color: rgba(118, 181, 188, 0.4);
+}
+
+.app .daysOfWeek #day:hover span#value {
+    display: block;
+}
+
+.app .daysOfWeek #day span {
+    margin: 0 auto;
+    margin-top: 8px;
+    color: hsl(28, 10%, 53%);
+}
+
+.app .statistcs {
+    width: 100%;
+    display: flex;
+}
+
+.app .half {
+    width: 100%;
+    height: 100%;
+    padding-top: 25px;
+}
+
+.app .half span {
+    display: block;
+    margin-left: auto;
+    color: hsl(28, 10%, 53%);
+    padding: 3px 0;
+}
+
+.app .half span#moneyMonth {
+    font-weight: 700;
+    font-size: 36px;
+    color: hsl(25, 47%, 15%);
+}
+
+.app .half:last-of-type {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+
+.app .half:last-of-type span:first-of-type {
+    color: hsl(25, 47%, 15%);
+    font-weight: 700;
+}
+
+@media screen and (max-width: 375px) {
+    
+    .container {
+        max-width: 98%;
+        padding: 10px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .app {
+        padding: 20px;
+    }
+
+    .app .daysOfWeek #day #chart {
+        width: 70%;
+    }
+
+}
+
