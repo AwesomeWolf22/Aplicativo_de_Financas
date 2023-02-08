@@ -48,7 +48,7 @@ header span {
     margin: 8px 0;
 }
 
-header span#money {
+header span.money {
     font-weight: 700;
     font-size: 28px;
 }
@@ -83,7 +83,7 @@ header .circle:last-of-type {
     border-radius: 20px;
 }
 
-.app h2 {
+.app h1 {
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     color: hsl(25, 47%, 15%);
@@ -98,7 +98,7 @@ header .circle:last-of-type {
     align-items: end;
 }
 
-.app .daysOfWeek #day {
+.app .daysOfWeek .day {
     width: 14.28%;
     display: flex;
     justify-content: space-around;
@@ -106,7 +106,7 @@ header .circle:last-of-type {
     position: relative;
 }
 
-.app .daysOfWeek #day span#value {
+.app .daysOfWeek .day span.value {
     background-color: hsl(25, 47%, 15%);
     padding: 6px;
     position: absolute;
@@ -118,7 +118,7 @@ header .circle:last-of-type {
     display: none;
 }
 
-.app .daysOfWeek #day #chart {
+.app .daysOfWeek .day .chart {
     width: 60%;
     height: 50px;
     background-color: rgb(236, 119, 95);
@@ -127,23 +127,23 @@ header .circle:last-of-type {
     cursor: pointer;
 }
 
-.app .daysOfWeek #day #chart:hover {
+.app .daysOfWeek .day .chart:hover {
     background-color: rgba(236, 119, 95, 0.4);
 }
 
-.app .daysOfWeek #day #chart.bigger {
+.app .daysOfWeek .day .chart.bigger {
     background-color: rgb(118, 181, 188);
 }
 
-.app .daysOfWeek #day #chart.bigger:hover {
+.app .daysOfWeek .day .chart.bigger:hover {
     background-color: rgba(118, 181, 188, 0.4);
 }
 
-.app .daysOfWeek #day:hover span#value {
+.app .daysOfWeek .day:hover span.value {
     display: block;
 }
 
-.app .daysOfWeek #day span {
+.app .daysOfWeek .day span {
     margin: 0 auto;
     margin-top: 8px;
     color: hsl(28, 10%, 53%);
@@ -199,7 +199,7 @@ header .circle:last-of-type {
         padding: 20px;
     }
 
-    .app .daysOfWeek #day #chart {
+    .app .daysOfWeek .day .chart {
         width: 70%;
     }
 

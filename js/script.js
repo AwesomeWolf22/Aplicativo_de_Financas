@@ -1,7 +1,7 @@
-var chart = document.querySelectorAll('.daysOfWeek #day #chart');
-var chartSpan = document.querySelectorAll('.daysOfWeek #day span').value;
+var chart = document.querySelectorAll('.daysOfWeek .chart');
+var chartSpan = document.querySelectorAll('.daysOfWeek .day span').value;
 var chartContainer = document.querySelector('.daysOfWeek');
-var spanValue = document.querySelectorAll('.daysOfWeek #day span#value')
+var spanValue = document.querySelectorAll('.daysOfWeek .day span.value')
 
 var moneyMonth = document.querySelector('span#moneyMonth');
 
@@ -17,7 +17,6 @@ request.onload = function(){
     console.log(request.response);
 
     var maior;
-    var total = 0;
 
     for(var i = 0; i < request.response.length; i++){
 
@@ -32,14 +31,9 @@ request.onload = function(){
         chart[i].style.height = `${request.response[i].amount*2.5}px`
         spanValue[i].innerHTML = '$'+request.response[i].amount;
 
-        total += parseFloat(request.response[i].amount);
-
-        console.log(total)
-
     }
 
     chart[day].classList.add('bigger');
-    moneyMonth.innerHTML = "$"+total;
 
 }
 
